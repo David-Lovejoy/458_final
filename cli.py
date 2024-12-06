@@ -39,8 +39,9 @@ def client_program():
             elif command.startswith("get "):
                 # Handle file download
                 response = client_socket.recv(1024).decode()
+                response = client_socket.recv(1024).decode()
                 print("response: ", response)
-                if response == "1":
+                if True:
                     # Receive SCP file transfer details from the server
                     transfer_details = client_socket.recv(1024).decode()
                     print(f"File transfer details received: {transfer_details}")
